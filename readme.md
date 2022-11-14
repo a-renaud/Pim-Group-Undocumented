@@ -18,9 +18,10 @@ The main goal of this repo is  to help you leverage Azure AD Privileged Access *
 
 ## Chrome Extension
 
-The chrome extension is very basic : It will inject a Javascript script into your page `addOn/scripts/hacky_copy.js` that will listen to an event.
-The event is pushed by a service worker : `addOn/scripts/background.js`. This was my first time creating a Chrome Extension so thanks to the doc *(and stack-overflow... a lot)* I managed to have something working.
-It is using `document.execCommand('copy')` which is deprecated so it is bound to stop working at any time.
+The chrome extension is very basic : It will inject a Javascript script into your page `addOn/scripts/hacky_copy.js` that will listen to an event. Once the event is triggered, and receive the PIM Token, it will copy it into the clip board. It is using `document.execCommand('copy')` which is deprecated so it is bound to stop working at any time.
+
+The event is pushed by a service worker : `addOn/scripts/background.js`. This was my first time creating a Chrome Extension so thanks to the doc *(and stack-overflow... a lot)* I managed to have something working, since you cannot copy from the service worker in a v3 Chrome Extension.
+
 If you want to grab the token manually, go into <https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupDetailsMenuBlade/~/EnablePrivilegedAccess/groupId/YOUR_AAAD_GROUP_ID>, press f12, go into network, and find the token there.
 
 This extension will automatically add into your clipboard the token needed by PIM when you navigate in your AAD in Groups -> Your Desired Group -> Privileged Access (Preview)
