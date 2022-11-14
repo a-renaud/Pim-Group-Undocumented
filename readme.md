@@ -23,7 +23,7 @@ The event is pushed by a service worker : `addOn/scripts/background.js`. This wa
 It is using `document.execCommand('copy')` which is deprecated so it is bound to stop working at any time.
 If you want to grab the token manually, go into <https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupDetailsMenuBlade/~/EnablePrivilegedAccess/groupId/YOUR_AAAD_GROUP_ID>, press f12, go into network, and find the token there.
 
-This extension will automatically add into your clipboard the token needed by PIM when you navigate in your AAD in Groups -> <Your Desired Group> -> Privileged Access (Preview)
+This extension will automatically add into your clipboard the token needed by PIM when you navigate in your AAD in Groups -> Your Desired Group -> Privileged Access (Preview)
 
 ## Site
 
