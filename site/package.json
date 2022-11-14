@@ -1,0 +1,28 @@
+{
+    "devDependencies": {
+        "@microsoft/microsoft-graph-types": "^2.25.0",
+        "@microsoft/microsoft-graph-types-beta": "^0.29.0-preview",
+        "@types/isomorphic-fetch": "^0.0.36",
+        "@types/node": "^18.11.9",
+        "@types/readline-sync": "^1.4.4",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "@azure/identity": "^2.1.0",
+        "@microsoft/microsoft-graph-client": "^3.0.3",
+        "dotenv": "^16.0.1",
+        "isomorphic-fetch": "^3.0.0",
+        "readline-sync": "^1.4.10"
+    },
+    "name": "pim-aad-bulk",
+    "author": "alexandre renaud",
+    "version": "1.0.0",
+    "description": "Leveraging PIM aad management in bulk",
+    "main": "index.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "ISC"
+}
